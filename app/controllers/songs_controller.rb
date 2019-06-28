@@ -10,6 +10,7 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
+    flash[:alert] = "Song not found."
   end
 
   def new
